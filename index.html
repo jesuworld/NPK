@@ -7,12 +7,12 @@
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Tamil:wght@400;600;700&family=Cinzel:wght@400;700&family=Cinzel+Decorative:wght@700&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
-html,body{height:100%;}
+html{height:100%;}body{min-height:100%;}
 body{
   font-family:'Noto Serif Tamil',Georgia,serif;
   background:#070f22;
   display:flex;align-items:center;justify-content:center;
-  min-height:100vh;overflow:hidden;
+  min-height:100vh;overflow-y:auto;overflow-x:hidden;
 }
 
 /* animated star field */
@@ -25,7 +25,7 @@ body::before{
 }
 
 .wrap{
-  text-align:center;padding:2rem 1.5rem;
+  text-align:center;padding:3.5rem 1.5rem 2.5rem;
   position:relative;z-index:1;
   max-width:680px;width:100%;
   animation:fadeIn 1.2s ease both;
@@ -35,8 +35,8 @@ body::before{
 .logo-ring{
   width:180px;height:180px;
   border-radius:50%;
-  border:2px solid rgba(201,153,42,.5);
-  background:#000;
+  border:none;
+  background:transparent;
   margin:0 auto 2.2rem;
   display:flex;align-items:center;justify-content:center;
   box-shadow:0 0 50px rgba(201,153,42,.2),0 0 100px rgba(201,153,42,.08);
@@ -45,7 +45,7 @@ body::before{
 .logo-ring img{
   width:176px;height:176px;
   border-radius:50%;object-fit:cover;
-  mix-blend-mode:screen;display:block;
+  mix-blend-mode:screen;display:block;filter:brightness(1.05);
 }
 
 /* top line */
